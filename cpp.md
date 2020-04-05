@@ -2,7 +2,7 @@
 
 ## 常用容器
 - string
--    string()
+    - string
 - list
 - vector
 - map
