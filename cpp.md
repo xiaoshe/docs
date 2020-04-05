@@ -1,7 +1,7 @@
 # cpp
 
 ## 常用容器
-- string
+- *string*
     - string: 构造函数
     - ~string: 析构函数
     - append: 当前值后面追加额外的字符
