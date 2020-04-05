@@ -1,7 +1,7 @@
 # cpp
 
 ## 常用容器
-- *string*
+- **string**
     - string: 构造函数
     - ~string: 析构函数
     - append: 当前值后面追加额外的字符
@@ -40,7 +40,7 @@
     - substr: 返回子串
     - swap: 交换内容
     - npos: 空，静态常量-1
-- list
+### list
 - vector
 - map
 - set
