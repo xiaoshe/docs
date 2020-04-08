@@ -22,7 +22,7 @@ string s4(s1, 1, string::npos); // size:4 capacity:4
 ## string(const char* s, size_t n)
 拷贝s的前n个字符
 
-```
+```cpp
 const char *s1 = "123";
 string s2(s1, 10); // size:10 capacity:10
 ```
@@ -30,7 +30,7 @@ string s2(s1, 10); // size:10 capacity:10
 ## string(size_t n, char c)
 填充n个c
 
-```
+```java
 string s1(3, 'x'); // size:3 capacity:3 s1="xxx"
 string s2(3, 42); // size:3 capacity:3 s2="***"
 ```
