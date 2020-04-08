@@ -30,7 +30,7 @@ string s2(s1, 10); // size:10 capacity:10
 ## string(size_t n, char c)
 填充n个c
 
-```java
+```c
 string s1(3, 'x'); // size:3 capacity:3 s1="xxx"
 string s2(3, 42); // size:3 capacity:3 s2="***"
 ```
