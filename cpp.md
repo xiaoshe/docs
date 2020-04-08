@@ -3,8 +3,8 @@
 ## 常用容器
 ### string
 - [string](https://github.com/xiaoshe/docs/blob/master/cpp/string-string.md): 构造函数
-- ~string: 析构函数
-- append: 当前值后面追加额外的字符
+- [~string]((https://github.com/xiaoshe/docs/blob/master/cpp/string-~string.md)): 析构函数
+- [append]((https://github.com/xiaoshe/docs/blob/master/cpp/string-append.md)): 当前值后面追加额外的字符
 - assign: 指派新值，使用方法同构造
 - at: 返回参数所指位置的字符的引用
 - begin: 返回string的起始位置
