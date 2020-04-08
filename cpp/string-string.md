@@ -9,7 +9,7 @@
 ## string(const string& str, size_t pos, size_t len = npos)
 从str的pos开始拷贝len个字符（如果len为npos则直到结尾）
 
-```1c
+```cpp
 string s1("12345");
 string s2(s1, 1, 2); // size:2 capacity:2
 string s3(s1, 1, 10); // size:4 capacity:4
