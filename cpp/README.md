@@ -42,5 +42,30 @@
 - [npos](https://github.com/xiaoshe/docs/blob/master/cpp/string/npos.md): 空，静态常量-1
 ### list
 ### vector
+- [vector](https://github.com/xiaoshe/docs/blob/master/cpp/vector/vector.md): 构造函数
+- [~vector](https://github.com/xiaoshe/docs/blob/master/cpp/vector/~vector.md): 析构函数
+- [assign](https://github.com/xiaoshe/docs/blob/master/cpp/vector/assign.md): 重新赋值
+- [at](https://github.com/xiaoshe/docs/blob/master/cpp/vector/at.md): 返回参数所指位置的元素的引用
+- [back](https://github.com/xiaoshe/docs/blob/master/cpp/vector/back.md): 返回最后一个元素的引用
+- [begin](https://github.com/xiaoshe/docs/blob/master/cpp/vector/begin.md): 返回数组起始位置
+- [capacity](https://github.com/xiaoshe/docs/blob/master/cpp/vector/capacity.md): 返回已分配空间的大小
+- [clear](https://github.com/xiaoshe/docs/blob/master/cpp/vector/clear.md): 清除所有数据
+- [empty](https://github.com/xiaoshe/docs/blob/master/cpp/vector/empty.md): 判断是否为空
+- [end](https://github.com/xiaoshe/docs/blob/master/cpp/vector/end.md): 返回past-the-end元素的迭代器
+- [erase](https://github.com/xiaoshe/docs/blob/master/cpp/vector/erase.md): 清除某数据
+- [front](https://github.com/xiaoshe/docs/blob/master/cpp/vector/front.md): 返回第一个元素的引用
+- [get_allocator](https://github.com/xiaoshe/docs/blob/master/cpp/vector/get_allocator.md): 返回该对象的内存分配器的拷贝（通常不用）
+- [insert](https://github.com/xiaoshe/docs/blob/master/cpp/vector/insert.md): 插入元素
+- [max_size](https://github.com/xiaoshe/docs/blob/master/cpp/vector/max_size.md): 返回数组可存放的最大长度
+- [operator=](https://github.com/xiaoshe/docs/blob/master/cpp/vector/operator=.md): 赋值
+- [operator[]](https://github.com/xiaoshe/docs/blob/master/cpp/vector/operator[].md): 返回参数所指位置元素的引用
+- [pop_back](https://github.com/xiaoshe/docs/blob/master/cpp/vector/pop_back.md): 删除最后一个元素
+- [push_back](https://github.com/xiaoshe/docs/blob/master/cpp/vector/push_back.md): 末尾追加一个元素
+- [rbegin](https://github.com/xiaoshe/docs/blob/master/cpp/vector/rbegin.md): 反向迭代器开始
+- [rend](https://github.com/xiaoshe/docs/blob/master/cpp/vector/rend.md): 反向迭代器末尾
+- [reserve](https://github.com/xiaoshe/docs/blob/master/cpp/vector/reserve.md): 重新分配空间
+- [resize](https://github.com/xiaoshe/docs/blob/master/cpp/vector/resize.md): 重新定义对象大小
+- [size](https://github.com/xiaoshe/docs/blob/master/cpp/vector/size.md): 返回大小
+- [swap](https://github.com/xiaoshe/docs/blob/master/cpp/vector/swap.md): 交换内容
 ### map
 ### set
