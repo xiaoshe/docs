@@ -1,5 +1,11 @@
 # python使用文档
-
+# 基本类型
+- set
+- 数组[]
+- map
+# 库
+- scipy
+- numpy
 # pyspark
 - DataFrame
 # matlibplot
