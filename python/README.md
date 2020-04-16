@@ -1,6 +1,6 @@
 # python使用文档
 # 基本操作
-- set
+- [set](https://github.com/xiaoshe/docs/blob/master/python/base/set.md)
 - 数组
 - dict
 # 相关概念
