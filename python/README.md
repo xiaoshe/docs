@@ -1,15 +1,23 @@
 # python使用文档
-# 基本类型
+# 基本操作
 - set
-- 数组[]
+- 数组
 - map
-
+# 相关概念
+- lambda
+- pass
+- None
+- yield
+- raise
+- @修饰符
 # pyspark
 - DataFrame
 # 库
 - scipy
 - numpy
-- matlibplot
+- json
+- request
+- matplotlib
 -- 折线图
 -- 柱状图
 - pandas
