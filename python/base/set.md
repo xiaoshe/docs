@@ -9,17 +9,15 @@ x = {1} # 必须有值，否则为dict
 x.add(value)
 
 
+## 交集
 ```python
 x = {1,2,3,4}
 y = {3,4,5,6,7}
-```
 
-## 交集
-```python
 ret = x & y
-```
-或
-```python
+# 或
 ret = x.intersection(y)
+
+# 输出ret:{3,4}
 ```
 
