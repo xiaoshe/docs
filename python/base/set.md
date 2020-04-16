@@ -5,6 +5,10 @@
 x = set()
 # 或
 x = {1} # 必须有值，否则为dict
+
+# 注意以下两种不同：
+x = set("red") # x: {'e', 'd', 'r'}
+x = {"red", "black"} # x: {'red', 'black'}
 ```
 
 ## 添加
