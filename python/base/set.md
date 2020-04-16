@@ -12,6 +12,10 @@ x = set("red",)    # x: {'e', 'd', 'r'}
 x = set(("red"))   # x: {'e', 'd', 'r'}
 x = set(("red",))  # x: {'red'}
 x = {"red"}        # x: {'red'}
+
+# 也可以直接传入元组
+a = ["red","red","black"]
+x = set(a)     # x: {'black', 'red'}
 ```
 
 ## 添加
