@@ -61,8 +61,8 @@ ret = {1,2,3} ^ {2,3}
 ```
 
 ## 子集和超集
-如果x包含y的所有元素，则x是y的超集，y是x的子集
-子集：x.issubset(y), x是y的子集
+如果x包含y的所有元素，则x是y的超集，y是x的子集  
+子集：x.issubset(y), x是y的子集  
 超集：x.issuperset(y), x是y的超集
 ```python
 {1}.issubset({1,2}) # True
