@@ -2,7 +2,7 @@
 # 基本操作
 - set
 - 数组
-- map
+- dict
 # 相关概念
 - lambda
 - pass
