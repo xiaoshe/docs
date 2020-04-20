@@ -5,7 +5,10 @@
 # pyspark
 [官方文档](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html)  
 
-## 部分代码
+## DataFrame使用
+- 创建
+- 保存
+- select/join/union/groupBy/show
 
 # 库
 - scipy
