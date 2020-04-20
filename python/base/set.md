@@ -19,9 +19,9 @@ x = set(a)     # x: {'black', 'red'}
 ```
 
 ## 添加
-x.add(value) # 添加一个元素
-或
-x.update() # 添加多个元素，可以是元组，字典，列表
+x.add(value) # 添加一个元素  
+或  
+x.update() # 添加多个元素，可以是元组，字典，列表  
 
 ```python
 x = {"red"}
@@ -30,11 +30,11 @@ x.update({"yellow":123})     # x: {'blue', 'red', 'black', 'yellow'}
 ```
 
 ## 移出元素
-x.remove(v)  # 元素v不存在时报错
-或
-x.discard(v) # 元素v不存在时也不报错
-或
-v = x.pop()  # 随机删除一个元素
+x.remove(v)  # 元素v不存在时报错  
+或  
+x.discard(v) # 元素v不存在时也不报错  
+或  
+v = x.pop()  # 随机删除一个元素  
 
 ## 元素个数
 len(x)
