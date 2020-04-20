@@ -3,7 +3,7 @@
 [Python 3.6.3 中文手册](https://www.runoob.com/manual/pythontutorial3/docs/html/)
 
 # pyspark
-[官方文档](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html)  
+[pyspark官方文档](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html)  
 
 ## DataFrame使用
 - 创建
