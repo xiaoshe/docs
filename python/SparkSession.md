@@ -53,6 +53,7 @@ class Builder:
 ### 简单使用
 ```python
 spark = SparkSession.builder.appName("x").getOrCreate()
+df = spark.createDataFrame([("a", 1), ("b", 2), ("c",  3), ("d",  2)], ["name", "age"])
 ```
 
 
@@ -61,7 +62,7 @@ SparkSession是Spark2.x后引入的概念。在2.x之前，对于不同的功能
 
 - 创建和操作RDD时，使用SparkContext
 - 使用Streaming时，使用StreamingContext
-- 使用SQL时，使用sqlContext
+- 使用SQL时，使用SQLContext
 - 使用Hive时，使用HiveContext
 
 在2.x中，为了统一上述的Context，引入SparkSession，实质上是SQLContext、HiveContext、SparkContext的组合。  
