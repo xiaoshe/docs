@@ -5,7 +5,7 @@
 # pyspark
 [pyspark官方文档](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html)  
 
-[SparkSession](https://github.com/xiaoshe/docs/blob/master/python/SparkSession.md)
+[SparkSession](https://github.com/xiaoshe/docs/blob/master/python/pyspark/SparkSession.md)
 
 DataFrame
 ## DataFrame使用
