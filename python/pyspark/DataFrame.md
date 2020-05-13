@@ -1,6 +1,7 @@
 # DataFrame简单使用
 
 ### 创建
+##### 通过二维数组创建
 ```python
 # 通过二维数组创建
 df = spark.createDataFrame([("a", 1), ("b", 2), ("c",  3), ("d",  2)], ["name", "age"])
