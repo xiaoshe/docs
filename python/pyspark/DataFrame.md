@@ -49,16 +49,41 @@ df3 = read_from_parquet(spark, "output", "select * from t where age=2", "t")
 ```
 
 ### 2 保存
+调用pyspark.sql.DataFrameWriter，
+```python
+# 覆盖写入output，格式为parquet
+df.repartition(1).write.format("parquet").mode("overwrite").save("output")
+# 或
+# 追加写入output，格式为csv
+df.repartition(1).write.save(format="csv", mode="append", path="output")
+```
+format(f):json/parquet/csv/jdbc  
+mode(saveMode):  
+- overwrite: 覆盖写入
+- append: 追加写入
+- ignore: 数据存在则不写
+- error/errorifexists: 数据存在则报错
 
+
+除了上述写入方式外，还有以下几种：
 ##### 2.1 保存为parquet文件
 ```python
 df.repartition(1).write.parquet(path="output", mode="overwrite")
 # repartition：文件个数
-# mode：模式，overwrite：覆盖写入；append：追加写入
 ```
 
 ##### 2.2 保存为csv文件
 ```python
 df.repartition(1).write.csv(path="output2", mode="append", sep='\t')
 # sep：字段分隔符，默认逗号','
+```
+
+##### 2.3 保存为json文件
+```python
+df.repartition(1).write.json(path="output", mode="overwrite")
+文件内容：
+{"name":"a","age":1}
+{"name":"b","age":2}
+{"name":"c","age":3}
+{"name":"d","age":2}
 ```
