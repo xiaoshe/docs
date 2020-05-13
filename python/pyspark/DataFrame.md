@@ -3,13 +3,14 @@
 ### 创建
 ##### 通过二维数组创建
 ```python
-# 通过二维数组创建
 df = spark.createDataFrame([("a", 1), ("b", 2), ("c",  3), ("d",  2)], ["name", "age"])
+```
 
-# 读取parquet文件创建
+##### 读取parquet文件创建
+```python
 df = spark.read.parquet(path)
 df.show()
-'''
+```
 +----+---+
 |name|age|
 +----+---+
@@ -18,12 +19,14 @@ df.show()
 |   c|  3|
 |   d|  2|
 +----+---+
-'''
 
-# 使用sql操作DataFrame
+
+##### 使用sql操作DataFrame
+```python
 df.createOrReplaceTempView("t")
 df2 = spark.sql("select * from t where age=2")
 df2.show()
+```
 +----+---+
 |name|age|
 +----+---+
@@ -32,7 +35,8 @@ df2.show()
 +----+---+
 # registerTempTable也可以，但2.0已弃用，所以建议使用createOrReplaceTempView。
 
-# 封装，读parquet文件并使用sql操作
+##### 封装，读parquet文件并使用sql操作
+```python
 def read_from_parquet(spark, path, sql, table_name):
     df = spark.read.parquet(path)
     df.createOrReplaceTempView(table_name)
