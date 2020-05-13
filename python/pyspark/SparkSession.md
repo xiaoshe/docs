@@ -52,6 +52,7 @@ class Builder:
 ```
 ### 简单使用
 ```python
+from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("x").getOrCreate()
 df = spark.createDataFrame([("a", 1), ("b", 2), ("c",  3), ("d",  2)], ["name", "age"])
 ```
