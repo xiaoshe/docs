@@ -6,55 +6,12 @@
 df = spark.createDataFrame([("a", 1), ("b", 2), ("c",  3), ("d",  2)], ["name", "age"])
 ```
 
-##### 1.2 读取parquet文件创建
-```python
-df = spark.read.parquet(path)
-df.show()
-'''
-+----+---+
-|name|age|
-+----+---+
-|   a|  1|
-|   b|  2|
-|   c|  3|
-|   d|  2|
-+----+---+
-'''
-```
-
-##### 1.3 使用sql操作DataFrame
-```python
-df.createOrReplaceTempView("t")
-# registerTempTable也可以，但2.0已弃用，所以建议使用createOrReplaceTempView
-df2 = spark.sql("select * from t where age=2")
-df2.show()
-'''
-+----+---+
-|name|age|
-+----+---+
-|   b|  2|
-|   d|  2|
-+----+---+
-'''
-```
-
-##### 1.4 封装，读parquet文件并使用sql操作
-```python
-def read_from_parquet(spark, path, sql, table_name):
-    df = spark.read.parquet(path)
-    df.createOrReplaceTempView(table_name)
-    return spark.sql(sql)
-df3 = read_from_parquet(spark, "output", "select * from t where age=2", "t")
-
-```
-
 ### 2 保存
-调用pyspark.sql.DataFrameWriter，
+调用pyspark.sql.DataFrameWriter
 ```python
 # 覆盖写入output，格式为parquet
 df.repartition(1).write.format("parquet").mode("overwrite").save("output")
-# 或
-# 追加写入output，格式为csv
+# 或 追加写入output，格式为csv
 df.repartition(1).write.save(format="csv", mode="append", path="output")
 ```
 format(f):json/parquet/csv/jdbc  
@@ -74,7 +31,7 @@ df.repartition(1).write.parquet(path="output", mode="overwrite")
 
 ##### 2.2 保存为csv文件
 ```python
-df.repartition(1).write.csv(path="output2", mode="append", sep='\t')
+df.repartition(1).write.csv(path="output", mode="append", sep='\t')
 # sep：字段分隔符，默认逗号','
 ```
 
@@ -86,4 +43,67 @@ df.repartition(1).write.json(path="output", mode="overwrite")
 {"name":"b","age":2}
 {"name":"c","age":3}
 {"name":"d","age":2}
+```
+
+### 3 读取
+调用pyspark.sql.DataFrameReader
+```python
+# 读取parquet文件
+df = spark.read.format("parquet").load("output")
+# 或 读取json文件
+df = spark.read.load(format="json", path="output")
+```
+##### 1.1 读取parquet文件
+```python
+df = spark.read.parquet("output")
+df.show()
+'''
++----+---+
+|name|age|
++----+---+
+|   a|  1|
+|   b|  2|
+|   c|  3|
+|   d|  2|
++----+---+
+'''
+```
+##### 1.2 读取csv文件
+```python
+from pyspark.sql.types import *
+schema = StructType([
+            StructField('name', StringType(), False),
+            StructField('age', IntegerType(), False),
+        ])
+df = spark.read.csv("output", schema)
+```
+
+##### 1.3 读取json文件
+```python
+df = spark.read.json("output")
+```
+##### 1.4 使用sql操作DataFrame
+```python
+df.createOrReplaceTempView("t")
+# registerTempTable也可以，但2.0已弃用，所以建议使用createOrReplaceTempView
+df2 = spark.sql("select * from t where age=2")
+df2.show()
+'''
++----+---+
+|name|age|
++----+---+
+|   b|  2|
+|   d|  2|
++----+---+
+'''
+```
+
+##### 1.5 封装，读parquet文件并使用sql操作
+```python
+def read_from_parquet(spark, path, sql, table_name):
+    df = spark.read.parquet(path)
+    df.createOrReplaceTempView(table_name)
+    return spark.sql(sql)
+df3 = read_from_parquet(spark, "output", "select * from t where age=2", "t")
+
 ```
