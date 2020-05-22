@@ -3,7 +3,8 @@
 ### 1.内置方法sort()
 list.sort(key=None, reverse=False)  
 - key: 比较的元素，参数是列表的一个元素
-- reverse: True降序，False升序（默认）
+- reverse: True降序，False升序（默认）  
+
 仅限python3, python3无cmp参数
 
 ```python
