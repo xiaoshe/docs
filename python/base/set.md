@@ -42,6 +42,29 @@ len(x)
 ## 判断元素是否在集合中
 v in x
 
+## 与元组性能比较
+```python
+import time
+
+l = ["ab", "ac", "ad", "ae"]
+s = set(l)
+
+start = time.time()
+for x in range(10000000):
+    if "b" in l:
+        pass
+end = time.time()
+print(end - start)  # 输出：0.7535536289215088，而且，如果列表长度增加，耗时更多
+
+start = time.time()
+for x in range(10000000):
+    if "b" in s:
+        pass
+end = time.time()
+print(end - start)  # 输出：0.43207240104675293，而且，如果集合长度增加，耗时基本不变
+```
+判断某个value是否在某几个value中，最优方式是将这几个value做成set，而不是列表[]。
+
 ## 清空集合
 x.clear()
 
