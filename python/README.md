@@ -16,6 +16,7 @@
 
 ### pyspark.sql.functions
 - [collect_list](https://github.com/xiaoshe/docs/blob/master/python/pyspark/f_collect_list.md)
+- [count,sum,avg,min,max](https://github.com/xiaoshe/docs/blob/master/python/pyspark/f_avg.md)
 
 # 库
 - scipy
