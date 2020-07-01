@@ -9,10 +9,13 @@
 
 [StructType](https://github.com/xiaoshe/docs/blob/master/python/pyspark/StructType.md)
 
-## DataFrame
+### DataFrame
 - [创建、保存、读取](https://github.com/xiaoshe/docs/blob/master/python/pyspark/DataFrame.md)
 - [集合操作：交集、并集、差集](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_set.md)
 - select/join/union/groupBy/show
+
+### pyspark.sql.functions
+- [collect_list](https://github.com/xiaoshe/docs/blob/master/python/pyspark/f_collect_list.md)
 
 # 库
 - scipy
