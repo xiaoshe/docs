@@ -24,6 +24,7 @@ df.agg(F.avg("t").alias("avg"), # 平均值
        F.max("t").alias("max"), # 最大值
        F.mean("t").alias("mean") # 平均值
       ).show()
+# agg可换成select
 '''
 +-----+-----+-------------+----+-----------+---+---+-----+
 |  avg|count|countDistinct| sum|sumDistinct|min|max| mean|
