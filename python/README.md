@@ -5,11 +5,11 @@
 # pyspark
 [* pyspark官方文档](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html)  
 
-[SparkSession](https://github.com/xiaoshe/docs/blob/master/python/pyspark/SparkSession.md)
+[pyspark.sql.SparkSession](https://github.com/xiaoshe/docs/blob/master/python/pyspark/SparkSession.md)
 
-[StructType](https://github.com/xiaoshe/docs/blob/master/python/pyspark/StructType.md)
+[pyspark.sql.types.StructType](https://github.com/xiaoshe/docs/blob/master/python/pyspark/StructType.md)
 
-### DataFrame
+### pyspark.sql.DataFrame
 - [创建、保存、读取](https://github.com/xiaoshe/docs/blob/master/python/pyspark/DataFrame.md)
 - [集合操作：交集、并集、差集](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_set.md)
 - select/join/union/groupBy/show
