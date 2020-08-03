@@ -13,7 +13,8 @@
 - [创建、保存、读取](https://github.com/xiaoshe/docs/blob/master/python/pyspark/DataFrame.md)
 - [集合操作：交集、并集、差集](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_set.md)
 - [字段操作：增加、删除、重命名](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_column.md)
-- select/join/union/groupBy/show
+- [select/selectExpr](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_select.md)
+- join/union/groupBy/show
 
 ### pyspark.sql.functions
 - [collect_list](https://github.com/xiaoshe/docs/blob/master/python/pyspark/f_collect_list.md)
