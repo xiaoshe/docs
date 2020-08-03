@@ -83,3 +83,37 @@ df5.show()
 +---+---+----------+-------------+--------------------+
 '''
 ```
+
+## 字段重命名withColumnRenamed(existing, new)
+将字段existing重命名为new，并将返回一个DataFrame。如果existing字段不存在，则操作无效。
+```python
+df = spark.createDataFrame([("a", 1), ("b", 2), ("c",  3)], ["name", "age"])
+df1 = df.withColumnRenamed("age", "age1")
+df1.show()
+'''
++----+----+
+|name|age1|
++----+----+
+|   a|   1|
+|   b|   2|
+|   c|   3|
++----+----+
+'''
+```
+
+## 删除字段drop(*cols)
+删除指定的字段，并返回一个DataFrame，如果给定字段不存在，则不删除该字段
+```python
+df = spark.createDataFrame([("a", 22, 165), ("b", 23, 168), ("c",  25, 176)], ["name", "age", "height"])
+df1 = df.drop("age", "age1")
+df1.show()
+'''
++----+------+
+|name|height|
++----+------+
+|   a|   165|
+|   b|   168|
+|   c|   176|
++----+------+
+'''
+```
