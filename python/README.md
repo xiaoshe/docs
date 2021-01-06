@@ -15,6 +15,8 @@
 - [字段操作：增加、删除、重命名](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_column.md)
 - [选取字段：select/selectExpr](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_select.md)
 - [条件选取：filter/where](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_filter.md)
+- [返回元组：collect/first/head](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_collect.md)
+- [链接：join](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_join.md)
 - join/union/groupBy/show
 
 ### pyspark.sql.functions
