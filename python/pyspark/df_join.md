@@ -25,7 +25,9 @@ df2:
 |    d|  32|
 +-----+----+
 '''
-
+```
+### 连接条件
+```python
 # 表达式
 df_join1 = df1.join(df2, df1.name1==df2.name2)
 df_join1.show()
@@ -42,5 +44,21 @@ df_join1.show()
 # 表达式序列：df_join2 = df1.join(df2, [df1.name1==df2.name2, df1.age1==df2.age2])
 # 字符串：df_join3 = df1.join(df2, "name") # 2个df中均必须存在字段name
 # 字符串序列：df_join3 = df1.join(df2, ["name","age"]) # 2个df中均必须存在字段name,age
+
 ```
+### 左连接
+```python
+df_join3 = df1.join(df2, df1.name1==df2.name2, "left")
+df_join3.show()
+'''
++-----+----+-----+----+
+|name1|age1|name2|age2|
++-----+----+-----+----+
+|    c|  31|    c|  32|
+|    b|  21|    b|  21|
+|    a|  11| null|null|
++-----+----+-----+----+
+'''
+```
+
 
