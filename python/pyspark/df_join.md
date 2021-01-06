@@ -1,11 +1,11 @@
 # join
 
 ## join(other, on=None, how=None)：根据提供的表达式与另一个DataFrame做连接  
-other: 另一个DataFrame
-on: 字符串或字符串序列，表达式或表达式序列
-how: 字符串，默认inner，必须：inner, cross, outer, full, fullouter, full_outer, left, leftouter, left_outer, right, rightouter, right_outer, semi, leftsemi, left_semi, anti, leftanti and left_anti
+other: 另一个DataFrame  
+on: 字符串或字符串序列，表达式或表达式序列  
+how: 字符串，默认inner，必须：inner, cross, outer, full, fullouter, full_outer, left, leftouter, left_outer, right, rightouter, right_outer, semi, leftsemi, left_semi, anti, leftanti and left_anti  
 ```python
-# 加入有如下2个DataFrame
+# 假如有如下2个DataFrame
 '''
 df1:
 +-----+----+
@@ -38,5 +38,9 @@ df_join1.show()
 +-----+----+-----+----+
 '''
 
+# 其他形式：
+# 表达式序列：df_join2 = df1.join(df2, [df1.name1==df2.name2, df1.age1==df2.age2])
+# 字符串：df_join3 = df1.join(df2, "name") # 2个df中均必须存在字段name
+# 字符串序列：df_join3 = df1.join(df2, ["name","age"]) # 2个df中均必须存在字段name,age
 ```
 
