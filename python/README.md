@@ -16,8 +16,9 @@
 - [选取字段：select/selectExpr](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_select.md)
 - [条件选取：filter/where](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_filter.md)
 - [返回元组：collect/first/head](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_collect.md)
-- [链接：join](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_join.md)
-- join/union/groupBy/show
+- [连接：join](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_join.md)
+- [排序：sort/orderBy](https://github.com/xiaoshe/docs/blob/master/python/pyspark/df_sort.md)
+- union/groupBy/show
 
 ### pyspark.sql.functions
 - [collect_list](https://github.com/xiaoshe/docs/blob/master/python/pyspark/f_collect_list.md)
