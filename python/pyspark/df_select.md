@@ -42,12 +42,25 @@ df3.show()
 |   c| 35|
 +----+---+
 '''
+
+# 选取多个字段并改名
+df4 = df.select("age", df.name.alias("n"))
+df4.show()
+'''
++---+--+
+|age| n|
++---+--+
+| 22| a|
+| 23| b|
+| 25| c|
++---+--+
+'''
 ```
 
 ## selectExpr(*expr)：支持SQL表达式选择并返回DataFrame
 ```python
-df4 = df.selectExpr("max(age) a", "min(height) h")
-df4.show()
+df5 = df.selectExpr("max(age) a", "min(height) h")
+df5.show()
 '''
 +---+---+
 |  a|  h|
@@ -55,8 +68,8 @@ df4.show()
 | 25|165|
 +---+---+
 '''
-df5 = df.selectExpr("age * 2 age1", "abs(height) abs")
-df5.show()
+df6 = df.selectExpr("age * 2 age1", "abs(height) abs")
+df6.show()
 '''
 +----+---+
 |age1|abs|
