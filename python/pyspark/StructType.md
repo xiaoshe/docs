@@ -24,3 +24,21 @@ schema = StructType([
             StructField('age', IntegerType(), False),
         ])
 ```
+
+### ArrayType(dataType, nullable=True)
+```python
+schema = StructType([
+            StructField('name', StringType(), False),
+            StructField('tag', ArrayType(IntegerType(), False), False),
+        ])
+df = spark.createDataFrame([("a", [1]), ("b", [1,2]), ("c",  [1,2,3]), ("d", [1,2,3,4])], schema=schema)
+df.show()
++----+------------+
+|name|         tag|
++----+------------+
+|   a|         [1]|
+|   b|      [1, 2]|
+|   c|   [1, 2, 3]|
+|   d|[1, 2, 3, 4]|
++----+------------+
+```
