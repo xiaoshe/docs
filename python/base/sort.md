@@ -34,12 +34,12 @@ print(c)
 >>> [(3, 'a'), (1, 'b'), (2, 'c')]
 # 等同于
 c.sort(key=lambda x:x[1])
-
-
 ```
 ### 2.函数sorted()
 需要有返回值
+```python
 c = [(2,"c"), (1, "b"), (3, "a")]
 d = sorted(c, key=lambda x:x[1])
 print(d)
 >>> [(3, 'a'), (1, 'b'), (2, 'c')]
+```
